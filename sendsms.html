@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>jQuery Mobile Bootstrap Theme</title>
+		<link rel="stylesheet" href="themes/Bootstrap.css">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+		<script>
+			var userAgent = navigator.userAgent + '';
+			if (userAgent.indexOf('iPhone') > -1) {
+				document.write('<script src="scripts/cordova-iphone.js"></sc' + 'ript>');
+				var mobile_system = 'iphone';
+			} else if (userAgent.indexOf('Android') > -1) {
+				document.write('<script src="scripts/cordova-android.js"></sc' + 'ript>');
+				var mobile_system = 'android';
+			} else {
+				var mobile_system = '';
+			}
+		</script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<style>
+			.headerDiv {
+				border: none;
+			}
+			#input_container {
+				position: relative;
+				padding: 0;
+				margin: 0;
+			}
+			#input {
+				height: 50px;
+				margin: 0;
+				padding-left: 50px;
+			}
+			#input_img {
+				position: absolute;
+				bottom: 8px;
+				left: 10px;
+				/*width: 50px;
+				 height: 20px;*/
+			}
+			.grad {
+				background: url('img/bg13.jpg');
+			}
+			textarea {
+				overflow-x: scroll;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div data-role="page" data-theme="d" class="headerDiv grad">
+			<div data-role='header' class="headerDiv grad" style="color:#fbd37b;background:none;">
+				<h3>New Campaign</h3>
+			</div>
+			<div data-role="content" data-theme="c" class="grad" style="">
+				<div data-role="popup" id="myPopup" class="ui-content" style="position:fixed;top:10%;left:10%; width: 200px">
+					<h3>My Contacts</h3>
+					<div>
+						<label><input type="checkbox" />Abraham 233249430715</label>
+					</div>
+					<div>
+						<label><input type="checkbox" />Abraham 233249430715</label>
+					</div>
+					<div>
+						<label><input type="checkbox" />Abraham 233249430715</label>
+					</div>
+					<div>
+						<label><input type="checkbox" />Abraham 233249430715</label>
+					</div>
+					<div>
+						<label><input type="checkbox" />Abraham 233249430715</label>
+					</div>
+
+				</div>
+				<div id="input_container">
+					<input type="text" id="input" placeholder="Campaign Name">
+					<img src="img/megaphone.png" id="input_img" width="10%">
+				</div>
+				<br />
+				<div id="input_container">
+					<input type="text" id="input" placeholder="Recipients">
+					<img src="img/smartphone.png" id="input_img" width="10%">
+				</div>
+				<br />
+				<div id="input_container">
+					<a href="#myPopup" data-rel="popup" data-position-to="window"  style="text-shadow: none;cursor: pointer" id="input" class="btnPhonebook">My Phonebook</a>
+					<img src="img/phonebook.png" id="input_img" width="10%">
+					<!-- <a href="" class="snd">asjkdjsakdsajc</a> -->
+				</div>
+				<br />
+				<div id="input_container">
+					<textarea rows="20" cols="10" id="input" style="border-radius: 10px;">
+
+
+
+
+
+					</textarea>
+					<img src="img/school-material.png" id="input_img" width="10%">
+				</div>
+				<br />
+				<br />
+				<br />
+				<button class="ui-btn" id="btnLogin" style="background: #f7ba4f;width: 100%;height: 40px;border:1px solid #f7ba4f; color:white;font-weight: bolder">
+					Send
+				</button>
+			</div>
+			<div id="displayPhonebookLength"></div>
+			<div id="displayPhonebook"></div>
+		</div>
+		</div>
+	</body>
+</html>

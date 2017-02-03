@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+		<!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+		<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+		<!-- <link rel="stylesheet" href="themes/Bootstrap.css"> -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<!-- <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" /> -->
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+		<!-- Good default declaration:
+		* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+		* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+		* Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+		* Enable inline JS: add 'unsafe-inline' to default-src
+		* Enable eval(): add 'unsafe-eval' to default-src
+		* Create your own at http://cspisawesome.com
+		-->
+		<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script>
+			var userAgent = navigator.userAgent + '';
+			if (userAgent.indexOf('iPhone') > -1) {
+				document.write('<script src="scripts/cordova-iphone.js"></sc' + 'ript>');
+				var mobile_system = 'iphone';
+			} else if (userAgent.indexOf('Android') > -1) {
+				document.write('<script src="scripts/cordova-android.js"></sc' + 'ript>');
+				var mobile_system = 'android';
+			} else {
+				var mobile_system = '';
+			}
+		</script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+		<style>
+			a {
+				text-decoration: none;
+			}
+		</style>
+
+		<title>Hello World</title>
+	</head>
+
+	<body>
+		<div data-role="page" data-theme="d"  style="background:url('img/bg12.jpg')  no-repeat center;-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;">
+			<div data-role="content" data-theme="c" style="text-align: center;  padding-top:50px; background: none">
+				<img src="img/deywuro.png" style="margin-bottom: 50px;"/>
+				<div class="login-form" style=" padding: 45px;text-align: center; font-family: 'Roboto', sans-serif; outline: 0;background: none;">
+					<input type="text" placeholder="username" style="height: 50px;width: 100%;border:none; font-weight: bolder;padding-left: 10px;color: gray"/>
+					<br />
+					<input type="password" placeholder="password" style="height: 50px;width: 100%;border:none; font-weight: bolder;padding-left: 10px;color: gray;"/>
+					<br />
+					<br />
+					<a href="menu.html" rel="external">
+					<button class="ui-btn" id="btnLogin" style="background: #f7ba4f;width: 100%;height: 40px;border:1px solid #f7ba4f; color:white;font-weight: bolder">
+						login
+					</button></a>
+					<p class="message" style="color :#f7ba4f; font-weight: bolder;">
+						Not registered? <a href="#"  style="color: white;text-decoration: none;">Join Us</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			app.initialize();
+		</script>
+	</body>
+
+</html>
