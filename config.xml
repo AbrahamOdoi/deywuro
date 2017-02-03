@@ -6,8 +6,8 @@ xmlns:gap = "http://phonegap.com/ns/1.0"
 id        = "com.phonegap.helloworld"
 version   = "1.0.0">
 
-	<name>GOLDMINE</name>
-	<description>GOLDMINE REVENUE COLLECTOR</description>
+	<name>DEYWURO</name>
+	<description>DEYWURO MESSAGIONG APP</description>
 	<author href="http://npontu.com" email="support@npontu.com">NPONTU TECHNOLOGIES</author>
 
 	<!--
