@@ -16,5 +16,5 @@
   <author href="https://build.phonegap.com" email="support@phonegap.com">
       Abraham Odoi
   </author>
-
+<preference name="phonegap-version" value="cli-6.5.0" />
 </widget>
