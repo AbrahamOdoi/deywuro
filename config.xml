@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.pgb.brewapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-	<name>PhoneGap Build App</name>
+	<name>Deywuro</name>
 	<description>
-		This app brews beer.
+		Deywuro messaging app
 	</description>
 
-	<author email="seymourbutts@phonegap.com" href="http://phonegap.com">
-	   PhoneGap Team
+	<author email="appengineer@npontu.com" href="http://www.npontu.com">
+	  NPONTU TECHNOLOGIES -Abraham Odoi
 	</author>
 
 	<preference name="phonegap-version" value="cli-6.0.0" />
