@@ -5,10 +5,10 @@
 
 		document.getElementById("search").onclick = function() {
 			navigator.contacts.pickContact(function(contact) {
-				alert('The following contact has been selected:' + JSON.stringify(contact));
+				// alert('The following contact has been selected:' + JSON.stringify(contact));
 
 				document.getElementById("search").value = contact.phoneNumbers[0].value;
-				alert('myt ' + contact.phoneNumbers[0].value);
+				// alert('myt ' + contact.phoneNumbers[0].value);
 
 				var contactsDisplayed = document.getElementById("inputRecepients").value;
 				var contactsDisplayedLength = contactsDisplayed.length;
