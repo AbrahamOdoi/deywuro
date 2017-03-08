@@ -10,14 +10,14 @@
 				document.getElementById("search").value = contact.phoneNumbers[0].value;
 				alert('myt ' + contact.phoneNumbers[0].value);
 
-				var contactsDisplayed = document.getElementById("displayContacts").value;
+				var contactsDisplayed = document.getElementById("inputRecepients").value;
 				var contactsDisplayedLength = contactsDisplayed.length;
 				if (contactsDisplayedLength > 0) {
 					var addup = "";
 				} else {
 					var addup = contactsDisplayed + ",";
 				}
-				document.getElementById("displayContacts").value = addup + contact.phoneNumbers[0].value;
+				document.getElementById("inputRecepients").value = addup + contact.phoneNumbers[0].value;
 
 			}, function(err) {
 				alert('Error: ' + err);
