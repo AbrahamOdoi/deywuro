@@ -1,26 +1,19 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>jQuery Mobile Bootstrap Theme</title>
-		<link rel="stylesheet" href="themes/Bootstrap.css">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
-		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
-		<script>
-			var userAgent = navigator.userAgent + '';
-			if (userAgent.indexOf('iPhone') > -1) {
-				document.write('<script src="scripts/cordova-iphone.js"></sc' + 'ript>');
-				var mobile_system = 'iphone';
-			} else if (userAgent.indexOf('Android') > -1) {
-				document.write('<script src="scripts/cordova-android.js"></sc' + 'ript>');
-				var mobile_system = 'android';
-			} else {
-				var mobile_system = '';
-			}
-		</script>
+
+		<script type="text/javascript" src="contact.js"></script>
+		<script src="scripts/jquery.js"></script>
+		<script src="scripts/jquery.mobile.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="materialize-v0.97.5/materialize/js/materialize.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="font_awesome/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="font_awesome/css/font-awesome.min.css">
+		<link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<style>
@@ -36,6 +29,9 @@
 				height: 50px;
 				margin: 0;
 				padding-left: 50px;
+				color: white;
+				text-shadow: none;
+				font-weight: bolder;
 			}
 			#input_img {
 				position: absolute;
@@ -50,7 +46,10 @@
 			textarea {
 				overflow-x: scroll;
 			}
-
+			input{
+				color: white;
+				text-shadow: none;
+			}
 		</style>
 	</head>
 	<body>
@@ -59,25 +58,6 @@
 				<h3>New Campaign</h3>
 			</div>
 			<div data-role="content" data-theme="c" class="grad" style="">
-				<div data-role="popup" id="myPopup" class="ui-content" style="position:fixed;top:10%;left:10%; width: 200px">
-					<h3>My Contacts</h3>
-					<div>
-						<label><input type="checkbox" />Abraham 233249430715</label>
-					</div>
-					<div>
-						<label><input type="checkbox" />Abraham 233249430715</label>
-					</div>
-					<div>
-						<label><input type="checkbox" />Abraham 233249430715</label>
-					</div>
-					<div>
-						<label><input type="checkbox" />Abraham 233249430715</label>
-					</div>
-					<div>
-						<label><input type="checkbox" />Abraham 233249430715</label>
-					</div>
-
-				</div>
 				<div id="input_container">
 					<input type="text" id="input" placeholder="Campaign Name">
 					<img src="img/megaphone.png" id="input_img" width="10%">
@@ -88,19 +68,15 @@
 					<img src="img/smartphone.png" id="input_img" width="10%">
 				</div>
 				<br />
+				<br />
 				<div id="input_container">
-					<a href="#myPopup" data-rel="popup" data-position-to="window"  style="text-shadow: none;cursor: pointer" id="input" class="btnPhonebook">My Phonebook</a>
+					<a href="" data-rel="popup" data-position-to="window"  style="text-shadow: none;cursor: pointer;margin-left: 50px;" id="search" class="btnPhonebook">My Phonebook</a>
 					<img src="img/phonebook.png" id="input_img" width="10%">
 					<!-- <a href="" class="snd">asjkdjsakdsajc</a> -->
 				</div>
 				<br />
 				<div id="input_container">
 					<textarea rows="20" cols="10" id="input" style="border-radius: 10px;">
-
-
-
-
-
 					</textarea>
 					<img src="img/school-material.png" id="input_img" width="10%">
 				</div>
@@ -115,5 +91,10 @@
 			<div id="displayPhonebook"></div>
 		</div>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="scripts/platformOverrides.js"></script>
+		<script type="text/javascript" src="scripts/index.js"></script>
+		<script src="materialize-v0.97.5/materialize/js/materialize.min.js"></script>
 	</body>
 </html>
