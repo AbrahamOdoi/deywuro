@@ -12,11 +12,7 @@
 
 				var contactsDisplayed = document.getElementById("inputRecepients").value;
 				var contactsDisplayedLength = contactsDisplayed.length;
-				if (contactsDisplayedLength > 0) {
-					var addup = "";
-				} else {
-					var addup = contactsDisplayed + ",";
-				}
+				var addup = contactsDisplayed + ",";
 				document.getElementById("inputRecepients").value = addup + contact.phoneNumbers[0].value;
 
 			}, function(err) {
