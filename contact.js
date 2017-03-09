@@ -11,9 +11,21 @@
 				// alert('myt ' + contact.phoneNumbers[0].value);
 
 				var contactsDisplayed = document.getElementById("inputRecepients").value;
-				var contactsDisplayedLength = contactsDisplayed.length;
-				var addup = contactsDisplayed + ",";
+				// var contactsDisplayedSplit = contactsDisplayed.split(',');
+				// var contactsDisplayedCount = contactsDisplayedSplit.length;
+				// if (contactsDisplayedCount < 2) {
+				// var addup = "";
+				// } else {
+				// var addup = contactsDisplayed + ",";
+				// };
+
 				document.getElementById("inputRecepients").value = addup + contact.phoneNumbers[0].value;
+
+				var contactsDispVal = document.getElementById("inputRecepients").value;
+				var contactsDispValSplit = contactsDispVal.split(',');
+				var contactsDispValCount = contactsDispValSplit.length;
+
+				document.getElementById("contactCount").value = contactsDispValCount + ' Contacts';
 
 			}, function(err) {
 				alert('Error: ' + err);
